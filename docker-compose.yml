@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  api:
+    container_name: docusaurus
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    volumes:
+      - .:/home/node/app
+    ports:
+      - 3001:3000
